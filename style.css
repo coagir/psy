@@ -1,0 +1,176 @@
+﻿/* style.css */
+body {
+    font-family: sans-serif;
+    background-color: #020101;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px;
+    color: white;
+}
+
+.discord-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background-color: #5865F2; /* Cor padrão do Discord */
+    padding: 2px;
+}
+
+
+.instagram {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 6px rgba(0, 255, 255, 0.1);
+}
+
+    .instagram img {
+        width: 20px;
+        height: 20px;
+        filter: invert(100%);
+    }
+
+.section-title {
+    font-size: 14px;
+    color: #39e6e6;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.daniel {
+    background-color: #a0a0a0;
+    max-width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.andre, .daniel {
+    background-color: #a0a0a0;
+    max-width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.nome {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.habilidades {
+    margin: 10px 0;
+}
+
+.habilidade {
+    background-color: #444;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    color: #777;
+    font-size: 14px;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease;
+}
+
+body {
+    cursor: none; /* esconde o cursor padrão */
+}
+
+#cursor {
+    width: 32px;
+    height: 27px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background: url('cursor-roxo.png') no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
+}
+
+#trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.trail {
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
