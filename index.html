@@ -40,40 +40,21 @@
     <div class="flex flex-wrap gap-10 justify-center p-6">
 
         <!-- Card ANDRE -->
-        <div class="rounded-2xl p-6 max-w-xs shadow-md animate-pulse-card bg-gradient-to-br from-zinc-900 via-zinc-800/80 to-black">
-            <div class="flex items-center gap-4 mb-4">
-                <img src="https://cdn.discordapp.com/attachments/1354928174265274480/1362198567074140334/5967a07fce81242f74336622a53ec6ab.webp?ex=680185c6&is=68003446&hm=b5cdfb620fd9c806f685fe96734ef620c7a9a3dbfb96684b700e910f1d7a9603&"
-                     alt="Foto de perfil" class="w-14 h-14 rounded-full border border-white">
-                <div>
-                    <h2 class="text-xl font-bold tracking-widest">André</h2>
-                    <p class="text-sm text-gray-400">Ocupado!</p>
-                </div>
-            </div>
-
-            <div class="flex gap-2 mt-4">
-                <a href="https://discord.com/users/1249477991747293266" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <img src="https://img.icons8.com/?size=100&id=30888&format=png&color=FFFFFF" alt="Discord"
-                         class="w-4 h-4">
-                    uwsf
-                </a>
-                <a href="https://instagram.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.005.246 2.47.415a4.92 4.92 0 0 1 1.675 1.093 4.92 4.92 0 0 1 1.093 1.675c.169.465.359 1.264.415 2.47.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.206-.246 2.005-.415 2.47a4.902 4.902 0 0 1-1.093 1.675 4.902 4.902 0 0 1-1.675 1.093c-.465.169-1.264.359-2.47.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.056-2.005-.246-2.47-.415a4.92 4.92 0 0 1-1.675-1.093 4.92 4.92 0 0 1-1.093-1.675c-.169-.465-.359-1.264-.415-2.47C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.206.246-2.005.415-2.47a4.902 4.902 0 0 1 1.093-1.675 4.902 4.902 0 0 1 1.675-1.093c.465-.169 1.264-.359 2.47-.415C8.416 2.175 8.796 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
-                    </svg>
-                    @Não Informado
-                </a>
-            </div>
-
-            <h3 class="text-gray-400 text-xs mb-1 mt-4">HABILIDADES</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">HTML/CSS</span>
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">JavaScript</span>
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Python</span>
-            </div>
-            <p class="text-sm text-gray-300">Não compactuo com nada de ilegal.</p>
+        <div id="card-andre" class="...">
+         <div class="flex items-center gap-4 mb-4">
+          <img class="avatar w-14 h-14 rounded-full border border-white"
+             src="..." alt="Foto de perfil">
+        <div>
+            <h2 class="nome text-xl font-bold tracking-widest">André</h2>
+            <p class="text-sm text-gray-400">Ocupado!</p>
         </div>
+          </div>
+       ...
+         <a class="instagram ..." href="..." target="_blank">
+         ...
+         <span>@Não Informado</span>
+         </a>
+       </div>
 
         <!-- Card DANIEL -->
         <div class="rounded-2xl p-6 max-w-xs shadow-md animate-pulse-card bg-gradient-to-br from-zinc-900 via-zinc-800/80 to-black">
@@ -184,6 +165,49 @@
 
 <div id="trail-container"></div>
 <script src="script.js"></script>
+
+<script>
+async function atualizarDadosDoCard(discordId, cardId, instagramHandle) {
+    try {
+        const response = await fetch(`https://discord.com/api/users/${discordId}`, {
+            headers: {
+                Authorization: "MTM1NDkyNzg2Mzg3MDAwMTE1Mg.GUkYcW.prXd3m4IlehVYnXNpdak7Hb2ns_pNPP6oBs2lA"
+            }
+        });
+
+        if (!response.ok) throw new Error("Erro ao buscar dados do Discord");
+
+        const data = await response.json();
+
+        const nome = data.username;
+        const discriminator = data.discriminator !== "0" ? `#${data.discriminator}` : "";
+        const avatarUrl = `https://cdn.discordapp.com/avatars/${discordId}/${data.avatar}.webp?size=128`;
+
+        // Atualiza o nome
+        document.querySelector(`#${cardId} .nome`).textContent = nome + discriminator;
+
+        // Atualiza a imagem
+        document.querySelector(`#${cardId} .avatar`).src = avatarUrl;
+
+        // Atualiza o Instagram
+        const instaLink = document.querySelector(`#${cardId} .instagram`);
+        instaLink.href = `https://instagram.com/${instagramHandle}`;
+        instaLink.querySelector("span").textContent = `@${instagramHandle}`;
+
+    } catch (err) {
+        console.error("Erro ao atualizar dados:", err);
+    }
+}
+
+// Chame a função para cada usuário
+// ⚠️ Substitua o SEU_TOKEN_AQUI por um token de BOT válido que tenha permissão de leitura de usuários
+// ⚠️ E troque os IDs e usuários conforme necessário
+
+atualizarDadosDoCard("1249477991747293266", "card-andre", "andre_ig");
+atualizarDadosDoCard("1240408239280226397", "card-daniel", "dndc2k25");
+atualizarDadosDoCard("184343146711351297", "card-gabriel", "coelhinhosmortos");
+</script>
+
     
 </body>
 
