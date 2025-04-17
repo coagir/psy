@@ -184,50 +184,7 @@
 
 <div id="trail-container"></div>
 <script src="script.js"></script>
-
-<script>
-async function atualizarDadosDoCard(discordId, cardId, instagramHandle) {
-    try {
-        const response = await fetch(`https://discord.com/api/users/${discordId}`, {
-            headers: {
-                Authorization: "MTM1NDkyNzg2Mzg3MDAwMTE1Mg.GUkYcW.prXd3m4IlehVYnXNpdak7Hb2ns_pNPP6oBs2lA"
-            }
-        });
-
-        if (!response.ok) throw new Error("Erro ao buscar dados do Discord");
-
-        const data = await response.json();
-
-        const nome = data.username;
-        const discriminator = data.discriminator !== "0" ? `#${data.discriminator}` : "";
-        const avatarUrl = `https://cdn.discordapp.com/avatars/${discordId}/${data.avatar}.webp?size=128`;
-
-        // Atualiza o nome
-        document.querySelector(`#${cardId} .nome`).textContent = nome + discriminator;
-
-        // Atualiza a imagem
-        document.querySelector(`#${cardId} .avatar`).src = avatarUrl;
-
-        // Atualiza o Instagram
-        const instaLink = document.querySelector(`#${cardId} .instagram`);
-        instaLink.href = `https://instagram.com/${instagramHandle}`;
-        instaLink.querySelector("span").textContent = `@${instagramHandle}`;
-
-    } catch (err) {
-        console.error("Erro ao atualizar dados:", err);
-    }
-}
-
-// Chame a função para cada usuário
-// ⚠️ Substitua o SEU_TOKEN_AQUI por um token de BOT válido que tenha permissão de leitura de usuários
-// ⚠️ E troque os IDs e usuários conforme necessário
-
-atualizarDadosDoCard("1249477991747293266", "card-andre", "andre_ig");
-atualizarDadosDoCard("1240408239280226397", "card-daniel", "dndc2k25");
-atualizarDadosDoCard("184343146711351297", "card-gabriel", "coelhinhosmortos");
-</script>
-
-    
+  
 </body>
 
 </html>
