@@ -1,190 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PSYCHOS</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        @keyframes pulse-card {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-            }
-
-            50% {
-                transform: scale(1.02);
-                box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-            }
-        }
-
-        .animate-pulse-card {
-            animation: pulse-card 2s infinite ease-in-out;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CryptaVPN - Free & Unlimited</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="bg-black text-white min-h-screen flex flex-col">
+  <header>
+    <div class="logo">🔐 CryptaVPN</div>
+    <a href="https://yourlink.com/download" class="btn-download pulse" target="_blank">Download Free</a>
+  </header>
 
-<!-- Camada de introdução -->
-<div id="intro"
-     class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md flex items-center justify-center z-50 cursor-pointer transition-opacity duration-500">
-    <p class="text-xl sm:text-xl text-white text-center px-4">Clique em qualquer lugar!</p>
-</div>
-
-<!-- Conteúdo principal -->
-<main id="conteudo" class="flex-grow flex items-center justify-center opacity-0 transition-opacity duration-500">
-    <div class="flex flex-wrap gap-10 justify-center p-6">
-
-        <!-- Card ANDRE -->
-            <div class="rounded-2xl p-6 max-w-xs shadow-md animate-pulse-card bg-gradient-to-br from-zinc-900 via-zinc-800/80 to-black">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://cdn.discordapp.com/avatars/1249477991747293266/8d0ca09dbc464f0dc21985c836b1d264.png?size=4096"
-                         alt="Foto de perfil" class="w-14 h-14 rounded-full border border-white">
-                    <div>
-                        <h2 class="text-xl font-bold tracking-widest">andre</h2>
-                        <p class="text-sm text-gray-400">Ocupado!</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-2 mt-4">
-                    <a href="https://discord.com/users/1249477991747293266" target="_blank"
-                       class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                        <img src="https://img.icons8.com/?size=100&id=30888&format=png&color=FFFFFF" alt="Discord"
-                             class="w-4 h-4">
-                        uwsf
-                    </a>
-                    <a href="https://instagram.com/andre.psyc" target="_blank"
-                       class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.005.246 2.47.415a4.92 4.92 0 0 1 1.675 1.093 4.92 4.92 0 0 1 1.093 1.675c.169.465.359 1.264.415 2.47.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.206-.246 2.005-.415 2.47a4.902 4.902 0 0 1-1.093 1.675 4.902 4.902 0 0 1-1.675 1.093c-.465.169-1.264.359-2.47.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.056-2.005-.246-2.47-.415a4.92 4.92 0 0 1-1.675-1.093 4.92 4.92 0 0 1-1.093-1.675c-.169-.465-.359-1.264-.415-2.47C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.206.246-2.005.415-2.47a4.902 4.902 0 0 1 1.093-1.675 4.902 4.902 0 0 1 1.675-1.093c.465-.169 1.264-.359 2.47-.415C8.416 2.175 8.796 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
-                        </svg>
-                        @andre.psyc
-                    </a>
-                </div>
-
-                <h3 class="text-gray-400 text-xs mb-1 mt-4">HABILIDADES</h3>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Jogar</span>
-                    <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Usar ritalina</span>
-                    <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Abusar</span>
-                </div>
-                <p class="text-sm text-gray-300">Não compactuo com nada de ilegal.</p>
-            </div>
-        
-        <!-- Card DANIEL -->
-        <div class="rounded-2xl p-6 max-w-xs shadow-md animate-pulse-card bg-gradient-to-br from-zinc-900 via-zinc-800/80 to-black">
-            <div class="flex items-center gap-4 mb-4">
-                <img src="https://cdn.discordapp.com/avatars/1240408239280226397/238442ddf166f24fb63c278041b76f86.png?size=4096"
-                     alt="Foto de perfil" class="w-14 h-14 rounded-full border border-white">
-                <div>
-                    <h2 class="text-xl font-bold tracking-widest">Daniel</h2>
-                    <p class="text-sm text-gray-400">Não pertube!</p>
-                </div>
-            </div>
-
-            <div class="flex gap-2 mt-4">
-                <a href="https://discord.com/users/1240408239280226397" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <img src="image.png" alt="Discord" class="w-4 h-4">
-                    dnpecinha
-                </a>
-                <a href="https://www.instagram.com/dndc2k25" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.005.246 2.47.415a4.92 4.92 0 0 1 1.675 1.093 4.92 4.92 0 0 1 1.093 1.675c.169.465.359 1.264.415 2.47.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.206-.246 2.005-.415 2.47a4.902 4.902 0 0 1-1.093 1.675 4.902 4.902 0 0 1-1.675 1.093c-.465.169-1.264.359-2.47.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.056-2.005-.246-2.47-.415a4.92 4.92 0 0 1-1.675-1.093 4.92 4.92 0 0 1-1.093-1.675c-.169-.465-.359-1.264-.415-2.47C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.206.246-2.005.415-2.47a4.902 4.902 0 0 1 1.093-1.675 4.902 4.902 0 0 1 1.675-1.093c.465-.169 1.264-.359 2.47-.415C8.416 2.175 8.796 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
-                    </svg>
-                    @dndc2k25
-                </a>
-            </div>
-
-            <h3 class="text-gray-400 text-xs mb-1 mt-4">HABILIDADES</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Jogar o dia todo</span>
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Dormir tarde</span>
-            </div>
-            <p class="text-sm text-gray-300">Gosta de mulher brava, surtada e sapeca.</p>
-        </div>
-
-        <!-- Card GABRIEL -->
-        <div class="rounded-2xl p-6 max-w-xs shadow-md animate-pulse-card bg-gradient-to-br from-zinc-900 via-zinc-800/80 to-black">
-            <div class="flex items-center gap-4 mb-4">
-                <img src="https://cdn.discordapp.com/avatars/184343146711351297/c1d65d00ca73f7949f40bf01bb6ba654.webp?size=4096"
-                     alt="Foto de perfil" class="w-14 h-14 rounded-full border border-white">
-                <div>
-                    <h2 class="text-xl font-bold tracking-widest">Gabriel</h2>
-                    <p class="text-sm text-gray-400">Dormindo</p>
-                </div>
-            </div>
-
-            <div class="flex gap-2 mt-4">
-                <a href="https://discord.com/users/184343146711351297" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <img src="https://img.icons8.com/?size=100&id=30888&format=png&color=FFFFFF" alt="Discord"
-                         class="w-4 h-4">
-                    7ie
-                </a>
-                <a href="https://instagram.com/coelhinhosmortos" target="_blank"
-                   class="inline-flex items-center gap-2 bg-zinc-800 text-gray-200 text-sm px-3 py-1 rounded-md hover:bg-zinc-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.005.246 2.47.415a4.92 4.92 0 0 1 1.675 1.093 4.92 4.92 0 0 1 1.093 1.675c.169.465.359 1.264.415 2.47.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.206-.246 2.005-.415 2.47a4.902 4.902 0 0 1-1.093 1.675 4.902 4.902 0 0 1-1.675 1.093c-.465.169-1.264.359-2.47.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.056-2.005-.246-2.47-.415a4.92 4.92 0 0 1-1.675-1.093 4.92 4.92 0 0 1-1.093-1.675c-.169-.465-.359-1.264-.415-2.47C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.206.246-2.005.415-2.47a4.902 4.902 0 0 1 1.093-1.675 4.902 4.902 0 0 1 1.675-1.093c.465-.169 1.264-.359 2.47-.415C8.416 2.175 8.796 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
-                    </svg>
-                    @coelhinhosmortos
-                </a>
-            </div>
-
-            <h3 class="text-gray-400 text-xs mb-1 mt-4">HABILIDADES</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Usar drogas</span>
-                <span class="bg-zinc-800 text-sm px-3 py-1 rounded-full">Se dopar</span>
-            </div>
-            <p class="text-sm text-gray-300"><b>Maior conquista:</b> Quase foi internado.</p>
-        </div>
+  <section class="main">
+    <div class="text fade-in">
+      <h1>Free VPN, fast and unlimited devices</h1>
+      <p class="preco">Fast, secure and completely <strong>FREE</strong></p>
+      <ul class="beneficios">
+        <li>✅ Stay safe on public Wi-Fi</li>
+        <li>✅ Access global content anywhere</li>
+        <li>✅ Block ads, trackers, and malware</li>
+        <li>✅ Works on mobile and desktop</li>
+      </ul>
+      <a href="https://yourlink.com/download" class="btn-download pulse" target="_blank">Install Now</a>
+      <p class="garantia">🔒 Free forever — No credit card required</p>
     </div>
-</main>
 
-<!-- Rodapé -->
-<footer class="footer text-center py-6 border-t border-zinc-700">
-    <div class="footer-title text-lg font-semibold tracking-widest mb-1">PSYCHOS - by. andre</div>
-    <div class="footer-copy text-sm text-gray-500">© 2025 Psychosdc - Todos os direitos reservados.</div>
-</footer>
+    <div class="celular fade-in">
+      <img src="https://cdn.discordapp.com/attachments/1385403296180605075/1393258102614396948/hero-en.webp?ex=68728439&is=687132b9&hm=187a1931ce508ae9227b21986e0b0d53d88f4b0dfa30aab46650b885f3a68ac8&" alt="CryptaVPN App Screenshot" />
+    </div>
+  </section>
 
-<!-- Música de fundo -->
-<audio id="bg-music" autoplay loop>
-    <source src="https://raw.githubusercontent.com/andrezin1k/psy/main/gueto.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-</audio>
+  <footer>
+    © 2025 CryptaVPN • 100% Free & Secure • All rights reserved.
+  </footer>
 
-<!-- Scripts -->
-<script>
-    const intro = document.getElementById("intro");
-    const conteudo = document.getElementById("conteudo");
-
-    intro.addEventListener("click", () => {
-        intro.classList.add("opacity-0");
-        setTimeout(() => {
-            intro.classList.add("hidden");
-            conteudo.classList.remove("opacity-0");
-        }, 500);
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('bg-music');
-        audio.volume = 0.3;
-        audio.play().catch(() => {
-            document.body.addEventListener('click', () => {
-                audio.play();
-            }, { once: true });
-        });
-    });
-</script>
-
-<div id="trail-container"></div>
-<script src="script.js"></script>
-  
 </body>
-
 </html>
